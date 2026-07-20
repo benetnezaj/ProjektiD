@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memory Book</title>
+    <link rel="stylesheet" href="css/book.css">
+</head>
+
+<body>
+    <!-- Desktop Book -->
+    <div class="book-container desktop-book">
+        <div class="book">
+            <div class="left-page cover">
+                <div class="cover-content">
+                    <h1>
+                        Libri i Memorieve
+                        <br>
+                        Benet & Diona
+                    </h1>
+                    <p>
+                        Momentet dhe memoriet më të bukura
+                    </p>
+                </div>
+            </div>
+            <div class="right-page">
+                <!-- Sheet 1 -->
+                <div class="sheet">
+                    <div class="page front">
+                        <h1>Fillimi</h1>
+                        <p class="intro-p">
+                            Ky libër kujtimesh nuk është i përfunduar, pasi pritet të mbushet me plot kujtime dhe momente të bukura gjatë gjithë jetës së tyre të lumtur.
+                        </p>
+                    </div>
+                    <div class="page back">
+                        <h1>Njoftimi</h1>
+                        <p>
+                            Ata të dy u njohën në kolegj, në një kohë kur Diona ishte studente, ndërsa Beneti punonte aty.
+                        </p>
+                        <p>
+                            Pas njohjes së tyre, ata filluan të komunikonin çdo ditë. Me çdo ditë që kalonte, dashuria dhe afërsia e tyre rritej gjithnjë e më shumë.
+                        </p>
+                        <p>
+                            Sa herë që takoheshin ose dëgjonin zërin e njëri-tjetrit, zemrat e tyre mbusheshin me emocione dhe lumturi.
+                        </p>
+                    </div>
+                </div>
+                <!-- Sheet 2 -->
+                <div class="sheet">
+                    <div class="page front">
+                        <img src="assets/images/BD3.png" class="memory-image" alt="Benet & Diona Memory 3">
+                        <p>
+                            Në lidhjen e tyre pati shumë mosmarrëveshje, por çdo herë përpiqeshin ta kuptonin njëri-tjetrin dhe asnjëherë nuk u dorëzuan përballë vështirësive. Ata gjithmonë luftuan për ta ruajtur lidhjen e tyre.
+                        </p>
+                    </div>
+                    <div class="page back">
+                        <h1>Rrugëtimi</h1>
+                        <p>
+                            Ata hasën shumë pengesa në rrugëtimin e tyre, pengesa të cilave jo çdokush do të mund t'u rezistonte dhe ta vazhdonte lidhjen.
+                        </p>
+                        <p>
+                            Por, pavarësisht të gjitha këtyre sfidave, sado që jeta përpiqej t'i largonte nga njëri-tjetri, ata gjithmonë gjenin një mënyrë për t'u bashkuar sërish.
+                        </p>
+                    </div>
+                </div>
+                <!-- Sheet 3 -->
+                <div class="sheet">
+                    <div class="page front">
+                        <img src="assets/images/BD2.png" class="memory-image" alt="Benet & Diona Memory 2">
+                        <p>
+                            Edhe pas të gjitha sfidave dhe ndodhive që kanë përjetuar, dashuria e tyre për njëri-tjetrin është bërë çdo ditë e më e fortë dhe do të vazhdojë të rritet deri në fund të jetës së tyre.
+                        </p>
+                    </div>
+                    <div class="page back author-page">
+                        <h1>
+                            Shënime nga Autori
+                        </h1>
+                        <p>
+                            Diona, më fal për çdo herë që të kam bërë të ndihesh keq. Asnjëherë nuk kam pasur qëllim të të lëndoj dhe nuk do të dua kurrë të të shkaktoj dhimbje. Ti je shumë e rëndësishme për mua dhe dua gjithmonë të të shoh të lumtur.
+                        </p>
+                        <br>
+                        <p>
+                            Kam thënë shumë gjëra që i kam shprehur në momente nervozizmi dhe që në të vërtetë nuk do të doja t'i thoja kurrë. Shpresoj që një ditë të gjesh forcë brenda vetes për të m'i falur të gjitha ato herë kur të kam bërë të ndihesh keq apo edhe të të kam shkaktuar lot.
+                        </p>
+                        <br>
+                        <p>
+                            Të dua pa fund dhe çdo ditë që kalon, dashuria ime për ty bëhet më e madhe. Je gjithçka që kam dëshiruar dhe mezi pres të ndërtojmë një jetë të re së bashku, plot dashuri dhe kujtime të bukura.
+                        </p>
+                        <br>
+                        <p class="birthday-wish">
+                            Urime ditëlindjen, e shtrenjta ime! ♥
+                        </p>
+                    </div>
+                </div>
+                <div class="right-page-cover">
+                    <div class="cover-content">
+                        <img src="assets/images/BD1.png" class="memory-image" alt="Benet & Diona Memory 1">
+                        <p>
+                            Urime ditëlindjen, dashuria e jetës sime ❤️
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <button class="arrow left" id="prev">◀</button>
+        <button class="arrow right" id="next">▶</button>
+    </div>
+
+
+    <!-- Mobile Book -->
+    <div class="mobile-book">
+        <div class="mobile-stack">
+            <!-- Spiral Binding rings on top (populated dynamically via JS) -->
+            <div class="notepad-spirals" id="notepadSpirals"></div>
+
+            <!-- Mobile Page 1 (Cover) -->
+            <div class="mobile-page active">
+                <div class="cover-content">
+                    <h1>
+                        Libri i Memorieve
+                        <br>
+                        Benet & Diona
+                    </h1>
+                    <p>
+                        Momentet dhe memoriet më të bukura
+                    </p>
+                </div>
+            </div>
+
+            <!-- Mobile Page 2 (Fillimi) -->
+            <div class="mobile-page">
+                <h1>Fillimi</h1>
+                <p>
+                    Ky libër kujtimesh nuk është i përfunduar, pasi pritet të mbushet me plot kujtime dhe momente të bukura gjatë gjithë jetës së tyre të lumtur.
+                </p>
+            </div>
+
+            <!-- Mobile Page 3 (Njoftimi) -->
+            <div class="mobile-page">
+                <h1>Njoftimi</h1>
+                <p>
+                    Ata të dy u njohën në kolegj, në një kohë kur Diona ishte studente, ndërsa Beneti punonte aty.
+                </p>
+                <p>
+                    Pas njohjes së tyre, ata filluan të komunikonin çdo ditë. Me çdo ditë që kalonte, dashuria dhe afërsia e tyre rritej gjithnjë e më shumë.
+                </p>
+                <p>
+                    Sa herë që takoheshin ose dëgjonin zërin e njëri-tjetrit, zemrat e tyre mbusheshin me emocione dhe lumturi.
+                </p>
+            </div>
+
+            <!-- Mobile Page 4 (Photo & Understanding) -->
+            <div class="mobile-page">
+                <img src="assets/images/BD3.png" class="memory-image" alt="Benet & Diona Memory 3">
+                <p>
+                    Në lidhjen e tyre pati shumë mosmarrëveshje, por çdo herë përpiqeshin ta kuptonin njëri-tjetrin dhe asnjëherë nuk u dorëzuan përballë vështirësive. Ata gjithmonë luftuan për ta ruajtur lidhjen e tyre.
+                </p>
+            </div>
+
+            <!-- Mobile Page 5 (Rrugëtimi) -->
+            <div class="mobile-page">
+                <h1>Rrugëtimi</h1>
+                <p>
+                    Ata hasën shumë pengesa në rrugëtimin e tyre, pengesa të cilave jo çdokush do të mund t'u rezistonte dhe ta vazhdonte lidhjen.
+                </p>
+                <p>
+                    Por, pavarësisht të gjitha këtyre sfidave, sado që jeta përpiqej t'i largonte nga njëri-tjetri, ata gjithmonë gjenin një mënyrë për t'u bashkuar sërish.
+                </p>
+            </div>
+
+            <!-- Mobile Page 6 (Photo & Strong Love) -->
+            <div class="mobile-page">
+                <img src="assets/images/BD2.png" class="memory-image" alt="Benet & Diona Memory 2">
+                <p>
+                    Edhe pas të gjitha sfidave dhe ndodhive që kanë përjetuar, dashuria e tyre për njëri-tjetrin është bërë çdo ditë e më e fortë dhe do të vazhdojë të rritet deri në fund të jetës së tyre.
+                </p>
+            </div>
+
+            <!-- Mobile Page 7 (Shënime nga Autori) -->
+            <div class="mobile-page author-page">
+                <h1>Shënime nga Autori</h1>
+                <p>
+                    Diona, më fal për çdo herë që të kam bërë të ndihesh keq. Asnjëherë nuk kam pasur qëllim të të lëndoj dhe nuk do të dua kurrë të të shkaktoj dhimbje. Ti je shumë e rëndësishme për mua dhe dua gjithmonë të të shoh të lumtur.
+                </p>
+                <br>
+                <p>
+                    Kam thënë shumë gjëra që i kam shprehur në momente nervozizmi dhe që në të vërtetë nuk do të doja t'i thoja kurrë. Shpresoj që një ditë të gjesh forcë brenda vetes për të m'i falur të gjitha ato herë kur të kam bërë të ndihesh keq apo edhe të të kam shkaktuar lot.
+                </p>
+                <br>
+                <p>
+                    Të dua pa fund dhe çdo ditë që kalon, dashuria ime për ty bëhet më e madhe. Je gjithçka që kam dëshiruar dhe mezi pres të ndërtojmë një jetë të re së bashku, plot dashuri dhe kujtime të bukura.
+                </p>
+                <br>
+                <p class="birthday-wish">Urime ditëlindjen, e shtrenjta ime! ♥</p>
+            </div>
+
+            <!-- Mobile Page 8 (Final Cover Card) -->
+            <div class="mobile-page">
+                <div class="cover-content">
+                    <img src="assets/images/BD1.png" class="memory-image" alt="Benet & Diona Memory 1">
+                    <p>
+                        Urime ditëlindjen, dashuria e jetës sime ❤️
+                    </p>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="mobile-controls">
+            <button id="mobilePrev" class="mobile-arrow">◀</button>
+            <span id="mobileCounter">1 / 8</span>
+            <button id="mobileNext" class="mobile-arrow">▶</button>
+        </div>
+    </div>
+
+    <script src="js/book.js"></script>
+</body>
+</html>
